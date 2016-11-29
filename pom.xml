@@ -38,6 +38,14 @@
     <fabric8.iconRef>karaf</fabric8.iconRef>
   </properties>
 
+	<modules>
+		<module>features</module>
+		<module>xa-datasource</module>
+		<module>datamodel</module>
+		<module>cxfhibernate</module>
+		<module>hibernatecxf-s2ikaraf</module>
+	</modules>
+
   <dependencyManagement>
     <dependencies>
       <!-- fabric8 bom must be before fabric8 bom -->
@@ -158,8 +166,8 @@
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.3</version>
         <configuration>
-          <source>1.7</source>
-          <target>1.7</target>
+          <source>1.8</source>
+          <target>1.8</target>
         </configuration>
       </plugin>
       <plugin>
