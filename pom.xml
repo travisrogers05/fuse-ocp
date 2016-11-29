@@ -125,6 +125,7 @@
       </exclusions>
     </dependency>
 
+<!--
 		<dependency>
 			<groupId>io.fabric8.kubernetes</groupId>
 			<artifactId>kubernetes-karaf</artifactId>
@@ -137,6 +138,7 @@
 			<classifier>features</classifier>
 			<type>xml</type>
 		</dependency>
+-->
 
   </dependencies>
 
