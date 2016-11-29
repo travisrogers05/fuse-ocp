@@ -214,7 +214,7 @@
         </executions>
       </plugin>
 
-      <!-- attach feature file to install for karaf assembly -->
+      <!-- attach feature file to install for karaf assembly 
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>build-helper-maven-plugin</artifactId>
@@ -238,6 +238,7 @@
           </execution>
         </executions>
       </plugin>
+-->
 
       <!-- plugin goals have to be executed in order -->
       <!-- 1. install the bundle and features file -->
