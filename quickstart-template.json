@@ -21,7 +21,7 @@
     },
     {
       "name": "GIT_REPO",
-      "value": "https://github.com/travisrogers05/examples.git",
+      "value": "https://github.com/travisrogers05/fuse-ocp.git",
       "required": true,
       "description": "Git repository, required"
     },
@@ -42,12 +42,12 @@
     },
     {
       "name": "APP_VERSION",
-      "value": "2.2.0.redhat-079",
+      "value": "1.0-SNAPSHOT",
       "description": "Application version"
     },
     {
       "name": "MAVEN_ARGS",
-      "value": "install -DskipTests -e",
+      "value": "install -DskipTests -Dfabric8.skip -e -B",
       "description": "Arguments passed to mvn in the build"
     },
     {
@@ -56,7 +56,9 @@
     },
     {
       "name": "ARTIFACT_DIR",
-      "description": "Maven build directory"
+      "displayName": "Maven build directory",
+      "value": "hibernatecxf-s2ikaraf/target/",
+      "description": "Directory of the artifact to be built, e.g. for multi-module builds."
     },
     {
       "description": "Namespace in which the Fuse ImageStreams are installed. These ImageStreams are normally installed in the openshift namespace. You should only need to modify this if you've installed the ImageStreams in a different namespace/project.",
@@ -201,6 +203,7 @@
               "name": "fis-karaf-openshift:${BUILDER_VERSION}"
             },
             "forcePull": true,
+            "incremental": true,
             "env": [
               {
                 "name": "BUILD_LOGLEVEL",
